@@ -6,13 +6,17 @@ bash zkServer.sh start-foreground
 
 ## Server (replicated)
 ### 1. Create config files in separate directories
-1.1 Files should be named *zoo.cfg*
-1.2 Files shoud contain:
+1. Files should be named *zoo.cfg*
+2.  Files shoud contain:
 
 dataDir=*path_to_myid_file (for example: /tmp/zookeeper/zk1)*
+
 clientPort=*for example: 2182*
+
 server.1=*address_ip_or_host_name (for example: localhost)*:2888:3888
+
 server.2=*address_ip_or_host_name (for example: localhost)*:2889:3889
+
 server.3=*address_ip_or_host_name (for example: localhost)*:2890:3890
 
 ### 2. Create *myid* files in directories specified in config files
