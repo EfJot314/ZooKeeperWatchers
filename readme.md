@@ -2,7 +2,9 @@
 
 ## Server (not replicated)
 ### In zookeeper bin directory:
+```
 bash zkServer.sh start-foreground
+```
 
 ## Server (replicated)
 ### 1. Create config files in separate directories
@@ -19,16 +21,21 @@ server.3=*address_ip_or_host_name (for example: localhost)*:2890:3890
 
 ### 2. Create *myid* files in directories specified in config files
 ### 3. In zookeeper bin directory:
+```
 bash zkServer.sh --config *relative_or_absolute_path_to_config_directory (for example: ./../conf/c1)* start-foreground
+```
 
 ## Client
 ### In zookeeper bin directory:
+```
 bash zkCli.sh -server *address_and_port (for example: 127.0.0.1:2181)*
+```
 
 ## App (ZooFollower)
 ### In this directory:
+```
 python ./main.py
-
+```
 
 # How to use?
 ## Initial steps
